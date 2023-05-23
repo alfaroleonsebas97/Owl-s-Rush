@@ -1,0 +1,163 @@
+From  Host  to  Server:
+	{    "type": "createLobbyPetition",    "nickname": "Bruno"}
+
+From  Server  to  Host:
+	{    "type": "lobbyCreated",    "lobbyCode": "12345",    "xhtmlPage": "LobbyScreen",    "playerId": "1"}
+
+From  Guest1  to  Server:
+	{    "type": "joinLobbyPetition",    "nickname": "Juan",    "lobbyCode": "12345"}
+
+From  Server  to  Guest1:
+	{    "type": "newPlayerJoined",    "xhtmlPage": "LobbyScreen",    "players": {        "nickname": "Bruno",        "playerId": "1"         },         "settings": {         "x2Card": "true",         "rainbowCard": "false",         "rollbackCard": "false",         "swapCard": "false",         "landAnotherPlayer": "false",         "owlsPerPlayer": "1",         "cardsPerPlayer": "3",    }}
+
+From  Server  to  Everyone:
+	broadcast {    "type": "newPlayerJoined",    "nickname": "Juan",    "playerId": "2"}
+
+From  Host  to  Server:
+	{    "type": "startPetition",    "lobbyCode": "12345"}
+
+From  Server  to  Everyone:
+	broadcast {    "type": "startMatch",    "xhtmlPage": "GameScreen"}
+
+------------------------------------------------------------------------------
+
+From  Guest1  to  Server:
+	{    "type": "newSetCards",    "playerId": "2",     "setCards": "purple, yellow, red"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "setCardsChanged",    "playerId": "2",    "setCards": "purple, yellow, red"}
+
+From  Host  to  Server:
+	{    "type": "newSetCards",    "playerId": "1",     "setCards": "blue, red, red"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "setCardsChanged",    "playerId": "1",    "setCards": "blue, red, red"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurn",    "playerInTurnId": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "20, -1".    "newSetCards": "sun, red, red", 
+    "sunPosition": "0",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "20, -1".    "newSetCards": "sun, red, red", 
+    "sunPosition": "0",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "20, 16".    "newSetCards": "purple, yellow, red", 
+    "sunPosition": "0",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "20, 16".    "newSetCards": "purple, yellow, red", 
+    "sunPosition": "0",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "20, 16".    "newSetCards": "red, red, red", 
+    "sunPosition": "1",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "20, 16".    "newSetCards": "red, red, red", 
+    "sunPosition": "1",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "20, 24".    "newSetCards": "purple, yellow, sun", 
+    "sunPosition": "1",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "20, 24".    "newSetCards": "purple, yellow, sun", 
+    "sunPosition": "1",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "27, 24".    "newSetCards": "blue, red, red", 
+    "sunPosition": "1",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "27, 24".    "newSetCards": "blue, red, red", 
+    "sunPosition": "1",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "27, 24".    "newSetCards": "purple, yellow, blue", 
+    "sunPosition": "2",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "27, 24".    "newSetCards": "purple, yellow, blue", 
+    "sunPosition": "2",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "32, 24".    "newSetCards": "blue, yellow, red", 
+    "sunPosition": "2",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "32, 24".    "newSetCards": "blue, yellow, red", 
+    "sunPosition": "2",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "32, 30".    "newSetCards": "sun, yellow, blue", 
+    "sunPosition": "2",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "32, 30".    "newSetCards": "sun, yellow, blue", 
+    "sunPosition": "2",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "4, 30".    "newSetCards": "green, yellow, red", 
+    "sunPosition": "2",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "4, 30".    "newSetCards": "green, yellow, red", 
+    "sunPosition": "2",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "4, 30".    "newSetCards": "green, yellow, blue", 
+    "sunPosition": "3",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "4, 30".    "newSetCards": "green, yellow, blue", 
+    "sunPosition": "3",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "8, 30".    "newSetCards": "green, yellow, yellow", 
+    "sunPosition": "3",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "8, 30".    "newSetCards": "green, yellow, yellow", 
+    "sunPosition": "3",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "8, 4".    "newSetCards": "green, yellow, green", 
+    "sunPosition": "3",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "8, 4".    "newSetCards": "green, yellow, green", 
+    "sunPosition": "3",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "13, 4".    "newSetCards": "green, yellow, blue", 
+    "sunPosition": "3",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "13, 4".    "newSetCards": "green, yellow, blue", 
+    "sunPosition": "3",    "nextPlayer": "2"}
+
+From  Guest1  to  Server:
+	{    "type": "turnFinished",    "playerId": "2"     "newOwlsPosition": "13, 7".    "newSetCards": "purple, yellow, green", 
+    "sunPosition": "3",    "winner": "false"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "2"     "newOwlsPosition": "13, 7".    "newSetCards": "purple, yellow, green", 
+    "sunPosition": "3",    "nextPlayer": "1"}
+
+From  Host  to  Server:
+	{    "type": "turnFinished",    "playerId": "1"     "newOwlsPosition": "41, 7".    "newSetCards": "green, yellow, red", 
+    "sunPosition": "3",    "winner": "true"}
+
+From  Server  to  Everyone:
+	broadcast{    "type": "playerInTurnFinished",    "playerId": "1"     "newOwlsPosition": "41, 7".    "newSetCards": "green, yellow, red", 
+    "sunPosition": "3",    "nextPlayer": "2"}
+
+From  Host  to  Server:
+	{    "type": "abandonGame",    "playerId": "1",    "abandonType": "exit"}
+
+From  Server  to  Everyone:
+	broadcast {    "type": "hostAbandon",    "xhtmlPage": "HomeScreen"}
