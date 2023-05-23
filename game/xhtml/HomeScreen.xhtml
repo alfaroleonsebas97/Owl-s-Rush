@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="author" content="Sebastian Alfaro, Bruno Alejandro Conejo Soto, Juan Garro"/>
+	<meta name="generator" content="Sebastian Alfaro, Bruno Alejandro Conejo Soto, Juan Garro"/>
+	<meta name="keywords" content="juego, buhos, tablero"/>
+	<title>Owl's Rush</title>
+	<link rel="icon" type="image/png" href="../images/owl_icon.svg"/>
+	<link rel="stylesheet" media="screen" href="../css/Common.css"/>
+	<link rel="stylesheet" media="screen" href="../css/HomeScreen.css" />
+	<script src="https://kit.fontawesome.com/b1645fda87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header id="site_header">
+		<img id="front_image_logo" src="../images/owl's_rush_horizontal.svg" alt="imagen_logo"/>
+		<button class="help_button" type="button">
+			<img class="help_button_img" src="../images/help_button.svg" alt="Help button" height="30"/>
+		</button>
+	</header>
+
+	<main id="main_content">
+		<fieldset id="homepage_container">
+			<fieldset id="homepage_register_info" class="box">
+
+				<!-- Top side -->
+				<fieldset id="info_top_side">
+					<form id="nickname_form" action="HomeScreen.xhtml" method="post">
+						<label for="nickname">Nickname:</label>
+						<input type="text" id="nickname" name="nickname" minlength="3" maxlength="12" size="15"/>
+					</form>
+				</fieldset>
+
+				<!-- Bottom side -->
+				<fieldset id="info_bottom_side">
+
+					<!-- Bottom Left side -->
+					<fieldset id="info_bottom_left_side">
+						<form id="join_lobby_form" action="HomeScreen.xhtml" method="post">
+							<label for="code">Code:</label>
+							<input type="text" id="code" name="code" maxlength="5" size="6"/><br/>
+						</form>
+						<div class="principal_button" >
+							<button class="principal_button_text" id="button_join_lobby" onclick="location.href='LobbyScreen.xhtml'" type="button">
+								Join Lobby
+							</button>
+						</div>
+					</fieldset>
+
+					<!-- Bottom Right side -->
+					<fieldset id="info_bottom_right_side">
+						<div class="principal_button" >
+							<button class="principal_button_text" id="button_create_lobby" onclick="location.href='LobbyScreen.xhtml'" type="button">
+								Create Lobby
+							</button>
+						</div>
+					</fieldset>
+
+				</fieldset>
+			</fieldset>
+		</fieldset>
+
+		<div class="help_modal">
+			<article class="help_info">
+				<h2 class="help_tittle_for_help_box">HELP</h2>
+				<p>Please, insert a nickname to identified yourself during the game.<br />
+					You can create a lobby with the button "Create Lobby" on the right,
+					or you can digit a code and join an existing lobby with the "Join Lobby"
+					button on the left.
+				</p>
+			</article>
+		</div>
+
+		<div id="credits_modal">
+			<div id="credits_modal_container" class="box">
+				<div id="close"></div>
+				<div id="credits_title">
+					<h3>CREDITS</h3>
+				</div>
+				<div id="credits_content">
+					<!-- List with images / resources used -->
+					<h4>"Board and Web owl icon"</h4>
+					<img src="../images/owl_icon.svg" alt="owl icon" />
+					<p>Owl by Maxim Kulikov from the Noun Project</p>
+
+					<h4>"Board nest icon"</h4>
+					<img src="../images/nest_no_color.svg" alt="nest icon"/>
+					<p>nest by Olena Panasovska from the Noun Project</p>
+
+					<h4>"Board sun icon"</h4>
+					<img src="../images/sun_no_color.svg" alt="sun icon" />
+					<p>Face by rivercon from the Noun Project</p>
+
+					<h4>"Help icon"</h4>
+					<img src="../images/help_button.svg" alt="help icon" />
+					<p>help by Sarote Impheng from the Noun Project</p>
+
+					<h4>"Arrow icon"</h4>
+					<img src="../images/direction_arrow.svg" alt="arrow icon" />
+					<p>Arrow by Adrien Coquet from the Noun Project</p>
+
+					<h4>"Rainbow icon"</h4>
+					<img src="../images/rainbow_icon.svg" alt="rainbow icon" />
+					<p>Rainbow by endang firmansyah from the Noun Project</p>
+
+					<h4>"Swap icon"</h4>
+					<img src="../images/swap_icon.svg" alt="swap icon"/>
+					<p>swap by Gregor Cresnar from the Noun Project</p>
+
+					<h4>"Rollback icon"</h4>
+					<img src="../images/rollback_icon.svg" alt=" icon"/>
+					<p>Recovery by Chameleon Design from the Noun Project</p>
+
+					<h4>"Board background"</h4>
+					<img src="../images/board_background.jpg" alt="background image"/>
+					<p><a href="https://www.freepik.com/vectors/background">Background vector created by Vectorium - www.freepik.com</a></p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="site_footer">
+		<div id="copyright_in_footer">
+			<p><small><i class="far fa-copyright"></i> 2021 By Sebastian Alfaro León, Juan Garro Núñez and Bruno Conejo Soto.</small></p>
+			<p><small>Adaptation for academic purposes.</small></p>
+		</div>
+		<button id="credits_button">Credits</button>
+	</footer>
+	<script src="../js/HelpModal.js" defer="defer"></script>
+	<script src="../js/HomeScreen.js" defer="defer"></script>
+</body>
+</html>

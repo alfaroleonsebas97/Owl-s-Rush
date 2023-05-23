@@ -1,0 +1,289 @@
+<% layout('layouts/main_layout') %>
+		<div id="game_board">
+			<div id="sun_container">
+					<div id="sun_box5"></div>
+					<div id="sun_box4"></div>
+					<div id="sun_box3"></div>
+					<div id="sun_box2"></div>
+					<div id="sun_box1">
+						<img id="sun" data-space="1" src="../images/sun_with_face.svg" alt="Sun"/>
+					</div>
+				</div>
+			<div id="board_container">
+					<div class="cell corner1"><img id="owl3_player1" class="owl_player1 owl" src="../images/owl_player1.svg" alt="Owl"/></div>
+					<div class="cell corner1"><img id="owl2_player1" class="owl_player1 owl" src="../images/owl_player1.svg" alt="Owl"/></div>
+					<div class="cell corner1 corner_border_right"><img id="owl1_player1" class="owl_player1 owl"  src="../images/owl_player1.svg" alt="Owl"/></div>
+
+					<div class="cell"> <div class="circle_lightblue"></div> </div>
+					<div class="cell"> <div class="circle_red"></div> </div>
+					<div class="cell corner_border_right"> <div class="circle_green"></div> </div>
+
+					<div class="cell corner2"><img id="owl5_player2" class="owl_player2 owl"  src="../images/owl_player2.svg" alt="Owl"/></div>
+					<div class="cell corner2"><img id="owl4_player2" class="owl_player2 owl" src="../images/owl_player2.svg" alt="Owl"/></div>
+					<div class="cell corner2"><img id="owl3_player2" class="owl_player2 owl" src="../images/owl_player2.svg" alt="Owl"/></div>
+
+					<div class="cell corner1"><img id="owl4_player1" class="owl_player1 owl" src="../images/owl_player1.svg" alt="Owl"/></div>
+					<div id="cellCorner1" class="cell corner1"></div>
+					<div class="cell corner1 corner_border_right"><img src="../images/direction_arrow.svg" id="arrow1" class="direction_arrow" alt="arrow"/></div>
+
+					<div class="cell"> <div class="circle_purple"></div> </div>
+					<div class="cell vertical_top"> <div class="circle_yellow">P1</div> </div>
+					<div class="cell corner_border_right"> <div class="circle_purple"></div> </div>
+
+					<div class="cell corner2 corner_border_bottom"></div>
+					<div id="cellCorner2" class="cell corner2"></div>
+					<div class="cell corner2"><img id="owl2_player2" class="owl_player2 owl" src="../images/owl_player2.svg" alt="Owl"/></div>
+
+					<div class="cell corner1 corner_border_bottom"><img id="owl5_player1" class="owl_player1 owl" src="../images/owl_player1.svg" alt="Owl"/></div>
+					<div class="cell corner1 corner_border_bottom corner_border_right"></div>
+					<div class="cell"> <div class="circle_lightblue"></div> </div>
+
+					<div class="cell"> <div class="circle_green"></div> </div>
+					<div class="cell vertical_top"> <div class="circle_red">P1</div> </div>
+					<div class="cell"> <div class="circle_yellow"></div> </div>
+
+					<div class="cell"> <div class="circle_lightblue"></div> </div>
+					<div class="cell corner2 corner_border_bottom"><img src="../images/direction_arrow.svg" id="arrow2" class="direction_arrow" alt="arrow"/></div>
+					<div class="cell corner2 corner_border_bottom"><img id="owl1_player2" class="owl_player2 owl"  src="../images/owl_player2.svg" alt="Sun"/></div>
+
+					<div class="cell"> <div class="circle_green"></div> </div>
+					<div class="cell"> <div class="circle_purple"></div> </div>
+					<div class="cell"> <div class="circle_yellow"></div> </div>
+
+					<div id="nest_cell"><img id="nest_img"  src="../images/nest.svg" alt="nest"/></div>
+
+					<div class="cell"> <div class="circle_red"></div> </div>
+					<div class="cell"> <div class="circle_purple"></div> </div>
+					<div class="cell"> <div class="circle_green"></div> </div>
+
+					<div class="cell"> <div class="circle_red"></div> </div>
+					<div class="cell horizontal_left"> <div class="circle_purple">P3</div> </div>
+					<div class="cell horizontal_left"> <div class="circle_green">P3</div> </div>
+
+					<div class="cell horizontal_right"> <div class="circle_yellow">P2</div> </div>
+					<div class="cell horizontal_right"> <div class="circle_lightblue">P2</div> </div>
+					<div class="cell"> <div class="circle_red"></div> </div>
+
+					<div class="cell"> <div class="circle_yellow"></div> </div>
+					<div class="cell"> <div class="circle_lightblue"></div> </div>
+					<div class="cell"> <div class="circle_red"></div> </div>
+
+					<div class="cell"> <div class="circle_yellow"></div> </div>
+					<div class="cell"> <div class="circle_purple"></div> </div>
+					<div class="cell"> <div class="circle_green"></div> </div>
+
+					<div class="cell corner3 corner_border_top"><img id="owl1_player3" class="owl_player3 owl"  src="../images/owl_player3.svg" alt="Owl"/></div>
+					<div class="cell corner3 corner_border_top"><img src="../images/direction_arrow.svg" id="arrow3" class="direction_arrow" alt="arrow"/></div>
+					<div class="cell"> <div class="circle_lightblue"></div> </div>
+
+					<div class="cell"> <div class="circle_yellow"></div> </div>
+					<div class="cell vertical_bottom"> <div class="circle_lightblue">P4</div> </div>
+					<div class="cell"> <div class="circle_yellow"></div> </div>
+
+					<div class="cell corner_border_right"> <div class="circle_lightblue"></div> </div>
+					<div class="cell corner4 corner_border_top"></div>
+					<div class="cell corner4 corner_border_top"><img id="owl5_player4" class="owl_player4 owl"  src="../images/owl_player4.svg" alt="Owl"/></div>
+
+					<div class="cell corner3"><img id="owl2_player3" class="owl_player3 owl"  src="../images/owl_player3.svg" alt="Owl"/></div>
+					<div id="cellCorner3" class="cell corner3"></div>
+					<div class="cell corner3 corner_border_right corner_border_top"></div>
+
+					<div class="cell"> <div class="circle_purple"></div> </div>
+					<div class="cell vertical_bottom"> <div class="circle_purple">P4</div> </div>
+					<div class="cell corner_border_right"> <div class="circle_red"></div> </div>
+
+					<div class="cell corner4"><img src="../images/direction_arrow.svg" id="arrow4" class="direction_arrow" alt="arrow"/></div>
+					<div id="cellCorner4" class="cell corner4"></div>
+					<div class="cell corner4"><img id="owl4_player4" class="owl_player4 owl"  src="../images/owl_player4.svg" alt="Owl"/></div>
+
+					<div class="cell corner3"><img id="owl3_player3" class="owl_player3 owl"  src="../images/owl_player3.svg" alt="Owl"/></div>
+					<div class="cell corner3"><img id="owl4_player3" class="owl_player3 owl"  src="../images/owl_player3.svg" alt="Owl"/></div>
+					<div class="cell corner3 corner_border_right"><img id="owl5_player3" class="owl_player3 owl" src="../images/owl_player3.svg" alt="Owl"/></div>
+
+					<div class="cell"> <div class="circle_green"></div> </div>
+					<div class="cell"> <div class="circle_red"></div> </div>
+					<div class="cell corner_border_right"> <div class="circle_green"></div> </div>
+
+					<div class="cell corner4"><img id="owl1_player4" class="owl_player4 owl"  src="../images/owl_player4.svg" alt="Owl"/></div>
+					<div class="cell corner4"><img id="owl2_player4" class="owl_player4 owl"  src="../images/owl_player4.svg" alt="Owl"/></div>
+					<div class="cell corner4"><img id="owl3_player4" class="owl_player4 owl"  src="../images/owl_player4.svg" alt="Owl"/></div>
+				</div>
+			<div id="cards_container">
+				<h3 class="card_titles">DECK</h3>
+				<div id="deck">
+					<img id="deck_img" src="../images/card_deck.svg" alt="Deck"/>
+				</div>
+				<h3 id="hand_title" class="card_titles">HAND</h3>
+
+				<div id="all_players">
+					<div class="player_turn">
+						<div id="div_hourglass_player1" class="turn"><img id="hourglass_img1" src="../images/hourglass.svg" alt="hourglass"/></div>
+						<div id="div_hourglass_player2" class="turn"><img id="hourglass_img2" src="../images/hourglass.svg" alt="hourglass"/></div>
+						<div id="div_hourglass_player3" class="turn"><img id="hourglass_img3" src="../images/hourglass.svg" alt="hourglass"/></div>
+						<div id="div_hourglass_player4" class="turn"><img id="hourglass_img4" src="../images/hourglass.svg" alt="hourglass"/></div>
+					</div>
+					<div class="player_name">
+						<div id="div_name_player1" class="name">P1<br/></div>
+						<div id="div_name_player2" class="name">P2<br/></div>
+						<div id="div_name_player3" class="name">P3<br/></div>
+						<div id="div_name_player4" class="name">P4<br/></div>
+					</div>
+					<div class="player_cards">
+						<div id="div_cards_player1" class="cards">
+							<div id="rainbow_dropdown_container">
+								<select id="rainbow_colors_option">
+									<option value="0">Select color...</option>
+									<option value="1">Red</option>
+									<option value="2">Lightblue</option>
+									<option value="3">Yellow</option>
+									<option value="4">Purple</option>
+									<option value="5">Green</option>
+								  </select>
+							</div>
+							<img id="img_card1_player1" class="card_img" src="../images/card_green.svg" alt="card"/>
+							<img id="img_card2_player1" class="card_img" src="../images/card_yellow.svg" alt="card"/>
+							<img id="img_card3_player1" class="card_img" src="../images/special_card_rainbow.svg" alt="card"/>
+						</div>
+						<div id="div_cards_player2" class="cards">
+							<img id="img_card1_player2" class="card_img" src="../images/card_red.svg" alt="card"/>
+							<img id="img_card2_player2" class="card_img" src="../images/card_purple.svg" alt="card"/>
+							<img id="img_card3_player2" class="card_img" src="../images/card_green.svg" alt="card"/>
+						</div>
+						<div id="div_cards_player3" class="cards">
+							<img id="img_card1_player3" class="card_img" src="../images/special_card_rollback.svg" alt="card"/>
+							<img id="img_card2_player3" class="card_img" src="../images/special_card_swap.svg" alt="card"/>
+							<img id="img_card3_player3" class="card_img" src="../images/card_lightblue.svg" alt="card"/>
+						</div>
+						<div id="div_cards_player4" class="cards">
+							<img id="img_card1_player4" class="card_img" src="../images/card_purple.svg" alt="card"/>
+							<img id="img_card2_player4" class="card_img" src="../images/special_card_x2.svg" alt="card"/>
+							<img id="img_card3_player4" class="card_img" src="../images/card_red.svg" alt="card"/>
+						</div>
+					</div>
+				</div>
+
+				<div class="buttons_container">
+					<div class="principal_button">
+						<button class="principal_button_text exit_game_button" id="exit_game_button" type="button">
+							EXIT GAME
+						</button>
+					</div>
+
+					<div id="div_return_to_lobby_play_button" class="principal_button">
+						<button class="principal_button_text return_to_lobby_play_button" type="button">
+							RETURN TO<br/>LOBBY
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Results -->
+		<div id="results_modal">
+			<div id="results_modal_container" class="box">
+				<div id="results_modal_title"><h3>RESULTS</h3></div>
+				<div id="results_modal_podium">
+					<div id="podium_first">
+						<div class="podium_owl"><img id="podium_owl_img1" class="owl_podium_img" src="../images/owl_player1.svg" alt="Owl1"/></div>
+						<div id="podium_name1" class="podium_name"></div>
+						<div id="podium_position_1" class="podium_columns">WINNER</div>
+					</div>
+					<div id="podium_second">
+						<div class="podium_owl"><img id="podium_owl_img2" class="owl_podium_img" src="../images/owl_player2.svg" alt="Owl2"/></div>
+						<div id="podium_name2" class="podium_name"></div>
+						<div id="podium_position_2" class="podium_columns">LOSER</div>
+					</div>
+					<div id="podium_third">
+						<div class="podium_owl"><img id="podium_owl_img3" class="owl_podium_img" src="../images/owl_player3.svg" alt="Owl3"/></div>
+						<div id="podium_name3" class="podium_name"></div>
+						<div id="podium_position_3" class="podium_columns">LOSER</div>
+					</div>
+					<div id="podium_fourth">
+						<div class="podium_owl"><img id="podium_owl_img4" class="owl_podium_img" src="../images/owl_player4.svg" alt="Owl4"/></div>
+						<div id="podium_name4" class="podium_name"></div>
+						<div id="podium_position_4" class="podium_columns">LOSER</div>
+					</div>
+				</div>
+				<div id="results_buttons" class="buttons_container">
+					<div class="principal_button exit_game_button" >
+						<button class="principal_button_text" type="button">
+							EXIT GAME
+						</button>
+					</div>
+					<div id="div_return_to_lobby_results" class="principal_button return_to_lobby_play_button" >
+						<button class="principal_button_text" type="button">
+							RETURN TO<br/>LOBBY
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Credits -->
+		<div id="credits_modal">
+			<div id="credits_modal_container" class="box">
+				<div id="close"></div>
+				<div id="credits_title">
+					<h3>CREDITS</h3>
+				</div>
+				<div id="credits_content">
+					<!-- List with images / resources used -->
+					<h4>"Board and Web owl icon"</h4>
+					<img src="../images/owl_icon.svg" alt="owl icon" />
+					<p>Owl by Maxim Kulikov from the Noun Project</p>
+
+					<h4>"Board nest icon"</h4>
+					<img src="../images/nest_no_color.svg" alt="nest icon"/>
+					<p>nest by Olena Panasovska from the Noun Project</p>
+
+					<h4>"Board sun icon"</h4>
+					<img src="../images/sun_no_color.svg" alt="sun icon" />
+					<p>Face by rivercon from the Noun Project</p>
+
+					<h4>"Help icon"</h4>
+					<img src="../images/help_button.svg" alt="help icon" />
+					<p>help by Sarote Impheng from the Noun Project</p>
+
+					<h4>"Arrow icon"</h4>
+					<img src="../images/direction_arrow.svg" alt="arrow icon" />
+					<p>Arrow by Adrien Coquet from the Noun Project</p>
+
+					<h4>"Rainbow icon"</h4>
+					<img src="../images/rainbow_icon.svg" alt="rainbow icon" />
+					<p>Rainbow by endang firmansyah from the Noun Project</p>
+
+					<h4>"Swap icon"</h4>
+					<img src="../images/swap_icon.svg" alt="swap icon"/>
+					<p>swap by Gregor Cresnar from the Noun Project</p>
+
+					<h4>"Rollback icon"</h4>
+					<img src="../images/rollback_icon.svg" alt=" icon"/>
+					<p>Recovery by Chameleon Design from the Noun Project</p>
+
+					<h4>"Board background"</h4>
+					<img src="../images/board_background.jpg" alt="background image"/>
+					<p><a href="https://www.freepik.com/vectors/background">Background vector created by Vectorium - www.freepik.com</a></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal Help -->
+		<div class="help_modal">
+			<article class="help_info">
+				<h2 class="help_tittle_for_help_box">HELP</h2>
+				<p class="help_text">	The player who first takes all his tokens to the nest wins.<br/><br/>
+
+					On the player's turn, he must choose one of his cards to move one of his owls.<br/><br/>
+
+					When a player gets a Sun card, on his next turn he is forced to use it.<br/>
+					The player who completes the cycle of the sun must move back to the starting point his closest one to the goal.<br/>
+					The cycle of the sun restarts each time it completes.<br/><br/>
+
+					There are some special cards that give advantages:<br/>
+						Card X2: card that allows the player to play two turns in a row.<br/>
+						Rainbow card: card that is valid for any color.<br/>
+						Rollback card: card that returns a token, of your choice, from another player to the field where it was previously.<br/>
+						Swap card: exchanges the position between the token of the player's choice and the closest token belonging to another player.
+				</p>
+			</article>
+		</div>

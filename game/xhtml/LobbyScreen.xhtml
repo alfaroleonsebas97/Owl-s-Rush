@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="author" content="Sebastian Alfaro, Bruno Alejandro Conejo Soto, Juan Garro"/>
+	<meta name="generator" content="Sebastian Alfaro, Bruno Alejandro Conejo Soto, Juan Garro"/>
+	<meta name="keywords" content="juego, buhos, tablero"/>
+	<title>Owl's Rush</title>
+	<link rel="icon" type="image/png" href="../images/owl_icon.svg"/>
+	<link rel="stylesheet" media="screen" href="../css/Common.css"/>
+	<link rel="stylesheet" media="screen" href="../css/LobbyScreen.css"/>
+	<script src="https://kit.fontawesome.com/b1645fda87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header id="site_header">
+		<img id="front_image_logo" src="../images/owl's_rush_horizontal.svg" alt="imagen_logo"/>
+		<button class="help_button" type="button">
+			<img class="help_button_img" src="../images/help_button.svg" alt="Help button" height="30"/>
+		</button>
+	</header>
+	<main id="main_content">
+		<article>
+			<h2>LOBBY</h2>
+
+			<div id="lobby_info_boxes">
+				<!-- Modificable solo para el anfitrión: -->
+				<section id="settings_box" class="box">
+					<h3>Settings</h3>
+					<form method="post" action="GameScreen.xhtml">
+						<fieldset id="checkboxes_for_cards">
+							<legend id="special_cards_tittle">Special Cards</legend>
+
+							<div>
+								<input type="checkbox" name="settings" value="1" checked="checked"/><span>X2 Card</span><br />
+								<span class="checkbox_explanation"><small>Allows the player to play two turns in a row.</small></span>
+							</div>
+							<div>
+								<input type="checkbox" name="settings" value="2" checked="checked"/><span>Rainbow Card</span><br />
+								<span class="checkbox_explanation"><small>It goes for any color.</small></span>
+							</div>
+							<div>
+								<input type="checkbox" name="settings" value="3" checked="checked"/><span>Rollback Card</span><br />
+								<span class="checkbox_explanation"><small>Returns a token, of your choice, from another player
+									to the space it was previously on.</small></span>
+							</div>
+							<div>
+								<input type="checkbox" name="settings" value="4" checked="checked"/><span>Swap Card</span><br />
+								<span class="checkbox_explanation"><small>It exchanges the position between the tile	of the
+									player's choice and the closest tile belonging
+									to another player.</small></span>
+							</div>
+						</fieldset>
+						<div>
+							<input type="checkbox" name="settings" value="5"/><span>Allow landing on another player's space</span><br />
+							<span class="checkbox_explanation"><small>If your owl will land on another player's owl, they
+								exhange positions.</small></span>
+						</div>
+
+						<p>Owls per player
+							<select name="owls_per_player" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4" selected="selected">4</option>
+								<option value="5">5</option>
+							</select>
+						</p>
+						<!-- <p><input type="number" name="owls_per_player" value="4" min="1" max="5" step="1"/> Owls per player</p> -->
+
+						<p>Cards per player
+							<select name="cards_per_player" size="1">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3" selected="selected">3</option>
+							</select>
+						</p>
+						<!-- <p><input type="number" name="cards_per_player" value="3" min="1" max="3" step="1"/> Cards per player</p> -->
+
+						<div id="div_button_to_start_game">
+							<div class="principal_button">
+								<button class="principal_button_text" id="button_start_game" onclick="location.href='GameScreen.xhtml'" type="button">
+									START
+								</button>
+							</div>
+							<!-- <input type="submit" value="START" name="button_start_game"/> -->
+						</div>
+					</form>
+				</section>
+				<!-- ________________________________________ -->
+
+				<section id="players_info_box" class="box">
+					<h3>Players</h3>
+
+					<div class="pair_of_players_info">
+						<figure class="player_info">
+							<img class="img_player_owl" src="../images/owl_player1.svg" alt="Img_owl_1" height="80"/>
+							<figcaption>Sebas</figcaption>
+						</figure>
+
+						<figure class="player_info">
+							<img class="img_player_owl" src="../images/owl_player2.svg" alt="Img_owl_2" height="80"/>
+							<figcaption>Juan</figcaption>
+						</figure>
+					</div>
+
+					<div class="pair_of_players_info">
+						<figure class="player_info">
+							<img class="img_player_owl" src="../images/owl_player3.svg" alt="Img_owl_3" height="80"/>
+							<figcaption>Bruno</figcaption>
+						</figure>
+
+						<figure class="player_info">
+							<img class="img_player_owl" src="../images/owl_player4.svg" alt="Img_owl_4" height="80"/>
+							<figcaption>Jeisson</figcaption>
+						</figure>
+					</div>
+
+					<p>CODE: ######<small> (Share this code with your friends)</small></p>
+
+					<!-- Visible solo para los visitantes: -->
+					<p>Wait for the host to start the game</p>
+					<!-- ________________________________________ -->
+					<div id="button_to_end">
+						<!-- Visible solo para el anfitrión: -->
+						<div class="principal_button">
+							<button class="principal_button_text" id="button_close_lobby" type="button">
+								CLOSE LOBBY
+							</button>
+						</div>
+						<!-- ________________________________________ -->
+
+						<!-- Visible solo para los visitantes: -->
+						<div class="principal_button">
+							<button class="principal_button_text" id="button_exit_lobby" onclick="location.href='HomeScreen.xhtml'" type="button">
+								EXIT LOBBY
+							</button>
+						</div>
+						<!-- ________________________________________ -->
+					</div>
+				</section>
+			</div>
+		</article>
+
+
+		<div class="help_modal">
+			<article class="help_info">
+				<h2 class="help_tittle_for_help_box">HELP</h2>
+				<p>As an administrator, you can decide how to play the game, simply you just have to
+					check the options you want, choose the number of owls and cards per player and
+					hit the START button.
+				</p>
+			</article>
+		</div>
+
+		<div id="credits_modal">
+			<div id="credits_modal_container" class="box">
+				<div id="close"></div>
+				<div id="credits_title">
+					<h3>CREDITS</h3>
+				</div>
+				<div id="credits_content">
+					<!-- List with images / resources used -->
+					<h4>"Board and Web owl icon"</h4>
+					<img src="../images/owl_icon.svg" alt="owl icon" />
+					<p>Owl by Maxim Kulikov from the Noun Project</p>
+
+					<h4>"Board nest icon"</h4>
+					<img src="../images/nest_no_color.svg" alt="nest icon"/>
+					<p>nest by Olena Panasovska from the Noun Project</p>
+
+					<h4>"Board sun icon"</h4>
+					<img src="../images/sun_no_color.svg" alt="sun icon" />
+					<p>Face by rivercon from the Noun Project</p>
+
+					<h4>"Help icon"</h4>
+					<img src="../images/help_button.svg" alt="help icon" />
+					<p>help by Sarote Impheng from the Noun Project</p>
+
+					<h4>"Arrow icon"</h4>
+					<img src="../images/direction_arrow.svg" alt="arrow icon" />
+					<p>Arrow by Adrien Coquet from the Noun Project</p>
+
+					<h4>"Rainbow icon"</h4>
+					<img src="../images/rainbow_icon.svg" alt="rainbow icon" />
+					<p>Rainbow by endang firmansyah from the Noun Project</p>
+
+					<h4>"Swap icon"</h4>
+					<img src="../images/swap_icon.svg" alt="swap icon"/>
+					<p>swap by Gregor Cresnar from the Noun Project</p>
+
+					<h4>"Rollback icon"</h4>
+					<img src="../images/rollback_icon.svg" alt=" icon"/>
+					<p>Recovery by Chameleon Design from the Noun Project</p>
+
+					<h4>"Board background"</h4>
+					<img src="../images/board_background.jpg" alt="background image"/>
+					<p><a href="https://www.freepik.com/vectors/background">Background vector created by Vectorium - www.freepik.com</a></p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer id="site_footer">
+		<div id="copyright_in_footer">
+			<p><small><i class="far fa-copyright"></i> 2021 By Sebastian Alfaro León, Juan Garro Núñez and Bruno Conejo Soto.</small></p>
+			<p><small>Adaptation for academic purposes.</small></p>
+		</div>
+		<button id="credits_button">Credits</button>
+	</footer>
+	<script src="../js/HelpModal.js" defer="defer"></script>
+	<script src="../js/LobbyScreen.js" defer="defer"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+h2,
+h3 {
+  text-align: center;
+}
+
+#lobby_info_boxes {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos de la parte de configuración */
+#settings_box {
+  margin: 1%;
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 2%;
+  max-width: 33%;
+}
+
+#checkboxes_for_cards {
+  border-color: #000;
+}
+
+#special_cards_tittle {
+  font-weight: bolder;
+}
+
+.checkbox_explanation {
+  margin-left: 3%;
+}
+
+#div_button_to_start_game {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos de la parte donde se muestra la información de los jugadores */
+#players_info_box {
+  margin: 1%;
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 2%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 33%;
+}
+
+.pair_of_players_info {
+  display: flex;
+}
+
+#button_to_end {
+  margin: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+#sessionCode {
+  font-weight: bold;
+}
+
+.img_player_owl {
+  visibility: hidden;
+}
+
+/* Para cuando la pantalla se pequeña (como la de un teléfono) */
+@media (max-width: 600px) {
+  #lobby_info_boxes {
+    flex-direction: column;
+  }
+
+  #players_info_box,
+  #settings_box {
+    max-width: 100%;
+  }
+}

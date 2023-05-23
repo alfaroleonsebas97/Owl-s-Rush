@@ -1,0 +1,137 @@
+#homepage_container {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-width: 500px;
+  min-height: 600px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#homepage_register_info {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0;
+  padding: 3%;
+  height: 60%;
+  width: 40%;
+  border: 3px solid black;
+  border-radius: 25px;
+  font-size: x-large;
+}
+
+#info_top_side {
+  flex: 1 1 auto;
+  display: flex;
+  align-self: auto;
+  border: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#info_bottom_side {
+  flex: 1 1 auto;
+  align-self: auto;
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+#info_bottom_left_side {
+  border: 0;
+  margin-right: 0;
+  border-right: 1px solid black;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#info_bottom_right_side {
+  border: 0;
+  margin-left: 0;
+  border-left: 1px solid black;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-self: auto;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#nickname_form {
+  min-width: 100%;
+}
+
+#join_lobby_form {
+  align-self: stretch;
+}
+
+#button_join_lobby,
+#button_create_lobby {
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 50%;
+}
+
+input[type=text] {
+  border: 2px solid gray;
+  min-height: 25px;
+  padding-left: 4px;
+  font-size: large;
+}
+
+input[type=text]:focus {
+  border: 2px solid black;
+}
+
+input[type=text]:hover {
+  border: 2px solid black;
+}
+
+/* Modify the view for smaller screens */
+@media screen and (max-width: 600px) {
+  #homepage_register_info {
+    align-items: center;
+  }
+
+  #info_bottom_side {
+    flex-direction: column;
+  }
+
+  #info_top_side {
+    justify-content: space-between;
+  }
+
+  #info_bottom_left_side {
+    align-items: stretch;
+    border: 0;
+    border-bottom: 1px solid black;
+  }
+
+  #info_bottom_right_side {
+    align-items: stretch;
+    border: 0;
+    border-top: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #homepage_register_info {
+    align-items: center;
+  }
+}

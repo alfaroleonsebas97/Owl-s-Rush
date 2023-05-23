@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="author" content="Sebastian Alfaro, Bruno Alejandro Conejo Soto, Juan Garro"/>
+  <meta name="generator" content="Sebastian Alfaro, Bruno Alejandro Conejo Soto, Juan Garro"/>
+  <meta name="keywords" content="juego, buhos, tablero"/>
+  <title>Owl's Rush</title>
+  <link rel="icon" type="image/png" href="../images/owl_icon.svg"/>
+  <link rel="stylesheet" media="screen" href="../css/Common.css"/>
+<% it.stylesheets.forEach((stylesheet) => { %>
+  <link rel="stylesheet" media="screen" href="<%= stylesheet %>"/>
+<% }); %>
+  <script src="https://kit.fontawesome.com/b1645fda87.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="site_header">
+    <img id="front_image_logo" src="../images/owl's_rush_horizontal.svg" alt="imagen_logo"/>
+    <button class="help_button" type="button">
+      <img class="help_button_img" src="../images/help_button.svg" alt="Help button" height="30"/>
+    </button>
+  </header>
+
+  <main id="main_content">
+    <%~ it.body %>
+  </main>
+  <footer id="site_footer">
+    <div id="copyright_in_footer">
+      <p><small><i class="far fa-copyright"></i> 2021 By Sebastian Alfaro León, Juan Garro Núñez and Bruno Conejo Soto.</small></p>
+      <p><small>Adaptation for academic purposes.</small></p>
+    </div>
+    <button id="credits_button">Credits</button>
+  </footer>
+<% it.scripts.forEach((script) => { %>
+  <script src="<%= script %>" type="module" defer="defer"></script>
+<% }); %>
+</body>
+</html>
