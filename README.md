@@ -1,6 +1,8 @@
 # Proyecto: Owl's Rush
 
 
+![Tablero de Owl's Rush](game/images/owl's_rush.svg)
+
 CI137 Desarrollo de Aplicaciones Web - I Semestre 2021
 
 Integrantes:
@@ -10,7 +12,7 @@ Integrantes:
 
 Este proyecto consiste en una adaptación, en versión de sitio Web, del juego [*Hoot Owl Hoot*](https://www.amazon.com/-/es/Juego-mesa-cooperativo-Peaceable-Kingdom/dp/B004HVKAAI) con fines académicos, sin fines de lucro, para el curso de Desarrollo de Aplicaciones Web de la Universidad de Costa Rica.
 
-![Tablero de Owl's Rush](design/Board.svg)
+![Tablero de Owl's Rush](design/Board.png)
 
 ## Adaptaciones al juego original de *Hoot Owl Hool*:
 
