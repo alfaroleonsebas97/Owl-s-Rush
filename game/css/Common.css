@@ -1,0 +1,289 @@
+:root {
+  /* Colors Palette */
+  --dark_blue: #233d4d;
+  --orange: #fe7f2d;
+  --yellow: #fcca46;
+  --green: #a1c181;
+  --swamp_green: #619b8a;
+
+  /* Secondary Button Color */
+  --dark_yellow: #af8a26;
+
+  /* Sun Cycle Colors */
+  --sun_cycle_yellow1: #ffd208;
+  --sun_cycle_yellow2: #ffe341;
+  --sun_cycle_blue1: #0083ee;
+  --sun_cycle_blue2: #2196f3;
+
+  /* Board Circles Colors */
+  --board_circle_yellow: #efe34b;
+  --board_circle_green: #7ae254;
+  --board_circle_lightblue: #4dd4e2;
+  --board_circle_red: #ef3535;
+  --board_circle_purple: #9f6aea;
+
+  /* Board Corner Colors */
+  --board_corner_green: rgba(41, 187, 60, 0.6);
+  --board_corner_lightblue: rgba(0, 196, 214, 0.6);
+  --board_corner_orange: rgba(255, 102, 0, 0.6);
+  --board_corner_purple: rgba(211, 36, 255, 0.6);
+
+  /* Board Nest Gradients */
+  --board_nest_gradient_brown: #ce6a0dd5;
+  --board_nest_gradient_gray: rgba(171, 167, 223, 0.3);
+
+  /* Modal Colors */
+  --black_opacity: rgba(0, 0, 0, 0.4);
+
+  /* Board dimensions */
+  --board_rows: 9;
+  --board_columns: 9;
+}
+
+html {
+  height: 100vh; /* 100% viewport height */
+}
+
+body {
+  font-family: sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  align-items: stretch;
+  margin: 0;
+  background-color: var(--swamp_green);
+  min-width: 640px;
+}
+
+#site_header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: var(--dark_blue);
+}
+
+#main_content {
+  flex: 1 1 auto;
+}
+
+#site_footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid black;
+  color: white;
+  background-color: var(--dark_blue);
+}
+
+#front_image_logo {
+  flex: 0 1 auto;
+  align-self: center;
+  height: 90%;
+  width: 35%;
+  min-height: 75px;
+  min-width: 300px;
+}
+
+#site_footer a:link {
+  color: white;
+}
+
+#site_footer a:visited {
+  color: white;
+}
+
+/*
+  Help Button
+  Adaptation from https://www.joshwcomeau.com/animation/3d-button/
+*/
+.help_button_img {
+  transition-duration: 0.1s;
+  float: right;
+  background-color: var(--yellow);
+  border-radius: 100%;
+  transform: translateY(-2px);
+}
+
+.help_button {
+  flex: 0 1 auto;
+  align-self: auto;
+  position: absolute;
+  background-color: var(--dark_yellow);
+  border: 2px solid black;
+  border-radius: 100%;
+  right: 1%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.help_button:hover {
+  border: 2px solid black;
+}
+
+.help_button:hover .help_button_img {
+  transform: translateY(-5px);
+}
+
+.help_button:active .help_button_img {
+  transform: translateY(-2px);
+}
+
+/*
+  Principal Buttons
+  Adaptation from https://www.joshwcomeau.com/animation/3d-button/
+*/
+.principal_button_text {
+  text-align: center;
+  transition-duration: 0.1s;
+  color: black;
+  display: block;
+  padding: 15px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: var(--yellow);
+  transform: translateY(-2px);
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.principal_button {
+  border: 2px solid gray;
+  display: inline-block;
+  font-weight: bold;
+  background-color: var(--dark_yellow);
+  border-radius: 10px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.principal_button:hover {
+  border: 2px solid black;
+}
+
+.principal_button:hover .principal_button_text {
+  transform: translateY(-7px);
+}
+
+.principal_button:active .principal_button_text {
+  transform: translateY(-2px);
+}
+
+input {
+  border-radius: 8px;
+}
+
+.box {
+  background-color: var(--green);
+  margin: 1%;
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 2%;
+  filter: drop-shadow(0 0 8px black);
+}
+
+@media screen and (max-width: 600px) {
+  #site_footer {
+    flex-direction: column;
+  }
+}
+
+/* Cosas para los cuadros de ayuda */
+.help_modal {
+  display: none; /* Se cambia a flex en el js */
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  padding-top: 15vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black_opacity);
+}
+
+.help_info {
+  margin: 10%;
+  background-color: var(--green);
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 1%;
+  filter: drop-shadow(7px 10px 20px black);
+  font-size: 25px;
+}
+
+.help_tittle_for_help_box {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .help_info {
+    margin-top: 4%;
+    padding: 5%;
+    font-size: 17px;
+  }
+}
+
+/* Sección créditos */
+#credits_modal {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: initial;
+  background-color: var(--black_opacity);
+}
+
+#credits_modal_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 85%;
+  overflow-y: auto;
+}
+
+#credits_modal_container img {
+  height: 8vh;
+}
+
+#credits_modal_container h4 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#credits_modal_container p {
+  margin-top: 5px;
+  margin-bottom: 2em;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#credits_button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
